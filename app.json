@@ -1,0 +1,51 @@
+{
+  "name": "MR.TK Bot",
+  "description": "Advanced WhatsApp Bot by MR•TOKYO",
+  "repository": "https://github.com/yourusername/mr-tk-bot",
+  "logo": "https://i.imgur.com/your-logo.png",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "whatsapp-bot",
+    "nodejs"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "env": {
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number (without +, e.g., 1234567890)",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Environment (production/development)",
+      "value": "production",
+      "required": false
+    },
+    "OPENAI_API_KEY": {
+      "description": "OpenAI API key for GPT and image generation",
+      "required": false
+    },
+    "GEMINI_API_KEY": {
+      "description": "Google Gemini API key",
+      "required": false
+    },
+    "WEATHER_API_KEY": {
+      "description": "OpenWeatherMap API key",
+      "required": false
+    },
+    "NEWS_API_KEY": {
+      "description": "News API key",
+      "required": false
+    }
+  }
+}
+

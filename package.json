@@ -1,0 +1,47 @@
+{
+  "name": "mr.tk",
+  "version": "2.2.2",
+  "description": "MR•TK BOT - Advanced WhatsApp Bot by MR•TOKYO",
+  "main": "index.baileys.js",
+  "scripts": {
+    "start": "node index.baileys.js",
+    "dev": "node index.baileys.js",
+    "pm2": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop mr-tk-bot",
+    "pm2:restart": "pm2 restart mr-tk-bot",
+    "health": "node -e \"require('http').get('http://localhost:3002/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) })\""
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "chatbot"
+  ],
+  "author": "TOKYO",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.21",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.21.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "gtts": "^0.2.1",
+    "jimp": "^1.6.0",
+    "moment": "^2.29.4",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.20.0",
+    "pino": "^8.21.0",
+    "puppeteer": "^21.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.33.0",
+    "translate-google": "^1.5.0",
+    "yt-search": "^2.13.1",
+    "ytdl-core": "^4.11.5"
+  }
+}
